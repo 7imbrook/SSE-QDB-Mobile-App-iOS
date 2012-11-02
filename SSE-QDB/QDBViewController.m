@@ -22,9 +22,19 @@
 @synthesize quoteStream;
 @synthesize refresh;
 
+@synthesize addQuote;
+
+@synthesize attributedTitle;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Code for button
+    
+    
+    
+    
+    // == END ==
     self.quoteStream.dataSource = self;
     self.quoteID = [[NSMutableArray alloc] init];
     self.body = [[NSMutableArray alloc] init];
@@ -43,9 +53,6 @@
         [body removeAllObjects];
         [discription removeAllObjects];
         for (id quotes in JSON){
-            NSLog(@"%@", [quotes valueForKeyPath:@"body"]);
-            NSLog(@"%@", [quotes valueForKeyPath:@"description"]);
-            NSLog(@"%@", [quotes valueForKeyPath:@"id"]);
             if ([quotes valueForKeyPath:@"approved"]) {
                 [quoteID addObject:[quotes valueForKeyPath:@"id"]];
                 [body addObject:[quotes valueForKeyPath:@"body"]];
@@ -56,6 +63,11 @@
                 }
             }
         }
+        NSDate *date = [NSDate date];
+        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"'Last updated ' h:mm:ss a 'on' MM/d/YY"];
+        NSString *dateFull = [formatter stringFromDate:date];
+        self.refresh.attributedTitle = [[NSAttributedString alloc] initWithString:dateFull];
         [self.refresh endRefreshing];
         [self.quoteStream reloadData];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -90,6 +102,5 @@
     cell.description.text = [self.discription objectAtIndex:indexPath.row];
     return cell;
 }
-
 
 @end

@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *quoteBody;
 @property (weak, nonatomic) IBOutlet UITextView *discription;
 @property (weak, nonatomic) IBOutlet UITextView *tags;
+
 - (IBAction)submitQuote:(id)sender;
 - (IBAction)returnToStream:(id)sender;
 

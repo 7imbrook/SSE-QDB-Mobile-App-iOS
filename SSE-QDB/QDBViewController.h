@@ -16,4 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *quoteStream;
 @property (nonatomic, retain) UIRefreshControl *refresh;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addQuote;
+
+@property (nonatomic, retain) NSAttributedString *attributedTitle;
+
 @end
