@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QDBViewController : UIViewController
+@interface QDBViewController : UIViewController <UITableViewDataSource>
+
+@property (nonatomic, retain) NSMutableArray *quoteID;
+@property (nonatomic, retain) NSMutableArray *body;
+@property (nonatomic, retain) NSMutableArray *discription;
+@property (weak, nonatomic) IBOutlet UITableView *quoteStream;
+@property (nonatomic, retain) UIRefreshControl *refresh;
 
 @end
