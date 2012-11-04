@@ -41,12 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
- - (IBAction)CreateQuote:(NSString*)quote:(NSString*)discription:(NSString*)tags {
-     NSURL *sendRequest = [[NSURL alloc] initWithString:@"hhttp://129.21.132.205:3000/"];
+ - (IBAction)CreateQuote:(NSString*)quote:(NSString*)description:(NSString*)quoteTags {
+     NSURL *sendRequest = [[NSURL alloc] initWithString:@"http://michaeltimbrook.com:3000/"];
      AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:sendRequest];
      NSDictionary *params = @{  @"quote[body]" : quote,
-                                @"quote[description]" : discription,
-                                @"tags" : tags };
+                                @"quote[description]" : description,
+                                @"tags" : quoteTags };
      NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/qdb/quotes" parameters:params];
      
      AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];

@@ -10,15 +10,16 @@
 		A98A7EF71643B3830076F87F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A7EF61643B3830076F87F /* Default-568h@2x.png */; };
 		A98A7EF91643B38A0076F87F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A7EF81643B38A0076F87F /* Default@2x.png */; };
 		A98A7EFB1643B38D0076F87F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A7EFA1643B38D0076F87F /* Default.png */; };
-		A98A7EFF1643B9890076F87F /* new_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A7EFE1643B9890076F87F /* new_icon.png */; };
 		A98A7F011643C8410076F87F /* QDB-SSE-nav.png in Resources */ = {isa = PBXBuildFile; fileRef = A98A7F001643C8410076F87F /* QDB-SSE-nav.png */; };
+		A98B9A63164479E4002E6F60 /* create_quote.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B9A62164479E4002E6F60 /* create_quote.png */; };
+		A98B9A6516460B27002E6F60 /* icon_hi_res.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B9A6416460B27002E6F60 /* icon_hi_res.png */; };
+		A98B9A6716460B2A002E6F60 /* icon_low_res.png in Resources */ = {isa = PBXBuildFile; fileRef = A98B9A6616460B2A002E6F60 /* icon_low_res.png */; };
 		A99AFA25164312D00022D51D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99AFA24164312D00022D51D /* UIKit.framework */; };
 		A99AFA27164312D00022D51D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99AFA26164312D00022D51D /* Foundation.framework */; };
 		A99AFA29164312D00022D51D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99AFA28164312D00022D51D /* CoreGraphics.framework */; };
 		A99AFA2F164312D00022D51D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A99AFA2D164312D00022D51D /* InfoPlist.strings */; };
 		A99AFA31164312D00022D51D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99AFA30164312D00022D51D /* main.m */; };
 		A99AFA35164312D00022D51D /* QDBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99AFA34164312D00022D51D /* QDBAppDelegate.m */; };
-		A99AFA37164312D00022D51D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A99AFA36164312D00022D51D /* Default.png */; };
 		A99AFA39164312D00022D51D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99AFA38164312D00022D51D /* Default@2x.png */; };
 		A99AFA3B164312D00022D51D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99AFA3A164312D00022D51D /* Default-568h@2x.png */; };
 		A99AFA3E164312D00022D51D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99AFA3C164312D00022D51D /* MainStoryboard.storyboard */; };
@@ -40,8 +41,10 @@
 		A98A7EF61643B3830076F87F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A98A7EF81643B38A0076F87F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A98A7EFA1643B38D0076F87F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A98A7EFE1643B9890076F87F /* new_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_icon.png; sourceTree = "<group>"; };
 		A98A7F001643C8410076F87F /* QDB-SSE-nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QDB-SSE-nav.png"; sourceTree = "<group>"; };
+		A98B9A62164479E4002E6F60 /* create_quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_quote.png; sourceTree = "<group>"; };
+		A98B9A6416460B27002E6F60 /* icon_hi_res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_hi_res.png; sourceTree = "<group>"; };
+		A98B9A6616460B2A002E6F60 /* icon_low_res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_low_res.png; sourceTree = "<group>"; };
 		A99AFA20164312D00022D51D /* SSE-QDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSE-QDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99AFA24164312D00022D51D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A99AFA26164312D00022D51D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 		A99AFA15164312D00022D51D = {
 			isa = PBXGroup;
 			children = (
+				A98B9A6616460B2A002E6F60 /* icon_low_res.png */,
+				A98B9A6416460B27002E6F60 /* icon_hi_res.png */,
 				A98A7EFA1643B38D0076F87F /* Default.png */,
 				A98A7EF81643B38A0076F87F /* Default@2x.png */,
 				A98A7EF61643B3830076F87F /* Default-568h@2x.png */,
@@ -163,8 +168,8 @@
 		A99AFA47164317950022D51D /* IMG */ = {
 			isa = PBXGroup;
 			children = (
-				A98A7EFE1643B9890076F87F /* new_icon.png */,
 				A98A7F001643C8410076F87F /* QDB-SSE-nav.png */,
+				A98B9A62164479E4002E6F60 /* create_quote.png */,
 			);
 			name = IMG;
 			sourceTree = "<group>";
@@ -249,15 +254,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99AFA2F164312D00022D51D /* InfoPlist.strings in Resources */,
-				A99AFA37164312D00022D51D /* Default.png in Resources */,
 				A99AFA39164312D00022D51D /* Default@2x.png in Resources */,
 				A99AFA3B164312D00022D51D /* Default-568h@2x.png in Resources */,
 				A99AFA3E164312D00022D51D /* MainStoryboard.storyboard in Resources */,
 				A98A7EF71643B3830076F87F /* Default-568h@2x.png in Resources */,
 				A98A7EF91643B38A0076F87F /* Default@2x.png in Resources */,
 				A98A7EFB1643B38D0076F87F /* Default.png in Resources */,
-				A98A7EFF1643B9890076F87F /* new_icon.png in Resources */,
 				A98A7F011643C8410076F87F /* QDB-SSE-nav.png in Resources */,
+				A98B9A63164479E4002E6F60 /* create_quote.png in Resources */,
+				A98B9A6516460B27002E6F60 /* icon_hi_res.png in Resources */,
+				A98B9A6716460B2A002E6F60 /* icon_low_res.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +365,12 @@
 		A99AFA45164312D00022D51D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Michael Timbrook";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSE-QDB/SSE-QDB-Prefix.pch";
 				INFOPLIST_FILE = "SSE-QDB/SSE-QDB-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -370,10 +378,12 @@
 		A99AFA46164312D00022D51D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSE-QDB/SSE-QDB-Prefix.pch";
 				INFOPLIST_FILE = "SSE-QDB/SSE-QDB-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

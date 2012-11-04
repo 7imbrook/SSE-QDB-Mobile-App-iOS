@@ -46,7 +46,7 @@
 }
 
 -(void)loadQuotes{
-    NSURL *url = [NSURL URLWithString:@"http://129.21.132.205:3000/qdb/quotes.json"]; // DEV-URL http://129.21.132.205:3000/qdb/quotes.json
+    NSURL *url = [NSURL URLWithString:@"http://michaeltimbrook.com:3000/qdb/quotes.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         [quoteID removeAllObjects];

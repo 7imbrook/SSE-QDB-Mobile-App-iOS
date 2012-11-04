@@ -9,17 +9,13 @@
             <objects>
                 <viewController id="2" customClass="QDBViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jha-VE-TU0">
                                 <color key="tintColor" red="0.93725496530532837" green="0.93725496530532837" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
-                                    <navigationItem id="RqX-pd-GMr">
-                                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="add" id="z98-aR-i2Z">
-                                            <color key="tintColor" red="0.67450982332229614" green="0.78431379795074463" blue="0.87058830261230469" alpha="1" colorSpace="deviceRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem id="RqX-pd-GMr"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOy-Mt-VCI">
@@ -82,18 +78,37 @@
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="QDB-SSE-nav.png" translatesAutoresizingMaskIntoConstraints="NO" id="58X-K2-97W">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="TYL-Ua-o8b"/>
                                     <constraint firstAttribute="width" constant="130" id="ZuH-2x-WJC"/>
+                                    <constraint firstAttribute="height" constant="43" id="oYn-r5-nep"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzE-Ii-pW0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Cze-FT-woz"/>
+                                    <constraint firstAttribute="height" constant="24" id="Lvz-jg-4jU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="create_quote.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vVm-c8-Z4J" kind="modal" modalTransitionStyle="coverVertical" id="0SL-Sh-QdM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dOy-Mt-VCI" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="2lw-fA-GaB"/>
                             <constraint firstItem="58X-K2-97W" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="814-Vv-PqG"/>
+                            <constraint firstItem="jha-VE-TU0" firstAttribute="bottom" secondItem="58X-K2-97W" secondAttribute="bottom" type="default" id="ChD-Nq-8jq"/>
+                            <constraint firstItem="DzE-Ii-pW0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="J5K-08-GrR"/>
+                            <constraint firstAttribute="trailing" secondItem="DzE-Ii-pW0" secondAttribute="trailing" constant="8" id="WXh-nW-jx8"/>
                             <constraint firstItem="58X-K2-97W" firstAttribute="centerX" secondItem="jha-VE-TU0" secondAttribute="centerX" type="default" id="Xlz-wK-y5R"/>
                             <constraint firstItem="dOy-Mt-VCI" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="aVu-ej-R2f"/>
-                            <constraint firstItem="58X-K2-97W" firstAttribute="bottom" secondItem="jha-VE-TU0" secondAttribute="bottom" type="default" id="cEX-Cu-zaU"/>
                             <constraint firstItem="dOy-Mt-VCI" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="dbG-YP-BJ6"/>
                             <constraint firstItem="jha-VE-TU0" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="gif-v0-Fpi"/>
                             <constraint firstItem="jha-VE-TU0" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="lKn-ga-tZ2"/>
@@ -102,7 +117,6 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="addQuote" destination="z98-aR-i2Z" id="0mM-dP-lBw"/>
                         <outlet property="quoteStream" destination="dOy-Mt-VCI" id="wt8-aR-um0"/>
                         <segue destination="vVm-c8-Z4J" kind="modal" identifier="createQuote" modalTransitionStyle="coverVertical" id="Io6-Ph-7bb"/>
                     </connections>
@@ -116,7 +130,7 @@
             <objects>
                 <viewController id="vVm-c8-Z4J" customClass="QDBQuoteSubmission" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHE-YK-E7f">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xr-SP-Bpt">
@@ -178,17 +192,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92156869173049927" green="0.92156869173049927" blue="0.92156869173049927" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="0xr-SP-Bpt" firstAttribute="top" secondItem="PCL-ev-dUJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0lD-he-dgF"/>
+                            <constraint firstItem="Ikg-tH-vQq" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="176" id="2ic-ec-r20"/>
                             <constraint firstItem="QSg-Bu-Bq3" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="6vD-ZR-DCN"/>
-                            <constraint firstItem="0xr-SP-Bpt" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="70" id="9YP-tc-Sup"/>
                             <constraint firstItem="PCL-ev-dUJ" firstAttribute="baseline" secondItem="QSg-Bu-Bq3" secondAttribute="baseline" type="default" id="E54-LN-U8h"/>
                             <constraint firstItem="TMb-O4-llH" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="LcJ-cT-UkY"/>
                             <constraint firstItem="PCL-ev-dUJ" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="NeN-V4-RNA"/>
                             <constraint firstItem="Ikg-tH-vQq" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="TP1-OV-3gV"/>
                             <constraint firstItem="0xr-SP-Bpt" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="X1r-SS-bvl"/>
-                            <constraint firstItem="TMb-O4-llH" firstAttribute="top" secondItem="Ikg-tH-vQq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Y8e-x2-cxN"/>
+                            <constraint firstItem="TMb-O4-llH" firstAttribute="top" secondItem="Ikg-tH-vQq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yik-aN-Z1c"/>
                             <constraint firstItem="PCL-ev-dUJ" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" type="default" id="aqj-X5-PXS"/>
                             <constraint firstItem="Ikg-tH-vQq" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="der-44-ZEj"/>
-                            <constraint firstItem="Ikg-tH-vQq" firstAttribute="top" secondItem="0xr-SP-Bpt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lAp-1P-Yk8"/>
                             <constraint firstItem="0xr-SP-Bpt" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="n5U-tb-AIg"/>
                             <constraint firstItem="TMb-O4-llH" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="qB0-5q-erW"/>
                         </constraints>
@@ -207,40 +221,14 @@
     </scenes>
     <resources>
         <image name="QDB-SSE-nav.png" width="257" height="88"/>
+        <image name="create_quote.png" width="48" height="48"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="QDBCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QDBCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="body" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="quoteNumber" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="QDBQuoteSubmission" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QDBQuoteSubmission.h"/>
-            <relationships>
-                <relationship kind="action" name="CreateQuote:::" candidateClass="NSString"/>
-                <relationship kind="action" name="returnToStream:"/>
-                <relationship kind="action" name="submitQuote:"/>
-                <relationship kind="outlet" name="discription" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="quoteBody" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="tags" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="QDBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QDBViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="quoteStream" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="0SL-Sh-QdM"/>
+    </inferredMetricsTieBreakers>
 </document>
