@@ -42,7 +42,7 @@
 }
 
  - (IBAction)CreateQuote:(NSString*)quote:(NSString*)description:(NSString*)quoteTags {
-     NSURL *sendRequest = [[NSURL alloc] initWithString:@"http://michaeltimbrook.com:3000/"];
+     NSURL *sendRequest = [[NSURL alloc] initWithString:@"http://michaeltimbrook.com:3000"];
      AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:sendRequest];
      NSDictionary *params = @{  @"quote[body]" : quote,
                                 @"quote[description]" : description,
@@ -65,6 +65,7 @@
 }
 
 - (IBAction)returnToStream:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 @end

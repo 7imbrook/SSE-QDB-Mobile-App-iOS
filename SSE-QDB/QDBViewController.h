@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QDBViewController : UIViewController <UITableViewDataSource>
+@interface QDBViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) NSMutableArray *quoteID;
 @property (nonatomic, retain) NSMutableArray *body;
@@ -17,7 +17,12 @@
 @property (nonatomic, retain) UIRefreshControl *refresh;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addQuote;
+@property (weak, nonatomic) IBOutlet UIButton *adminMenu;
 
 @property (nonatomic, retain) NSAttributedString *attributedTitle;
+
+-(void)configAdmin;
+-(void)loadQuotes;
+-(IBAction)mainViewSwipe:(id)sender;
 
 @end

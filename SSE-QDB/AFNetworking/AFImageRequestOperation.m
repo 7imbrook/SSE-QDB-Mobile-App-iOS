@@ -81,8 +81,10 @@ static dispatch_queue_t image_request_operation_processing_queue() {
             if (imageProcessingBlock) {
                 dispatch_async(image_request_operation_processing_queue(), ^(void) {
                     UIImage *processedImage = imageProcessingBlock(image);
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "requestOperation"
                     dispatch_async(requestOperation.successCallbackQueue ?: dispatch_get_main_queue(), ^(void) {
+#pragma clang diagnostic pop
                         success(operation.request, operation.response, processedImage);
                     });
                 });

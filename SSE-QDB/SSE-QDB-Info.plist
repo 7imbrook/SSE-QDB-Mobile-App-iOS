@@ -16,6 +16,8 @@
 			<array>
 				<string>icon_hi_res.png</string>
 				<string>icon_low_res.png</string>
+				<string>icon_57.png</string>
+				<string>icon_114.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

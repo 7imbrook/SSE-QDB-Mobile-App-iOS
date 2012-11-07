@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface QDBCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *quoteNumber;
