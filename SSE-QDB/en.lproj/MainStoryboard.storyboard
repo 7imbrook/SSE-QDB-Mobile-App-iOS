@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3079" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3079" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2077"/>
     </dependencies>
@@ -211,22 +211,55 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-8I-Auu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Sgs-ji-5a6"/>
+                                    <constraint firstAttribute="width" constant="87" id="dee-H7-wSo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-gc-Niy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="99U-Bb-XDG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Du-o5-uZX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="eNa-5g-BBL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92156869173049927" green="0.92156869173049927" blue="0.92156869173049927" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Ikg-tH-vQq" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="176" id="2ic-ec-r20"/>
                             <constraint firstItem="uO0-nk-Exk" firstAttribute="centerX" secondItem="0eH-eV-8X3" secondAttribute="centerX" type="default" id="5W7-6x-M2L"/>
+                            <constraint firstItem="MhY-8I-Auu" firstAttribute="top" secondItem="0eH-eV-8X3" secondAttribute="bottom" type="default" id="6Fn-c2-I0S"/>
+                            <constraint firstItem="0Du-o5-uZX" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="226" id="BO8-N2-CAZ"/>
                             <constraint firstItem="0eH-eV-8X3" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" type="default" id="BZX-fl-Lff"/>
+                            <constraint firstItem="0Du-o5-uZX" firstAttribute="leading" secondItem="jPb-gc-Niy" secondAttribute="leading" type="default" id="HdO-9h-qb9"/>
+                            <constraint firstItem="jPb-gc-Niy" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="163" id="JRs-91-igN"/>
                             <constraint firstItem="TMb-O4-llH" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="LcJ-cT-UkY"/>
                             <constraint firstItem="0eH-eV-8X3" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="OMh-mk-XfX"/>
+                            <constraint firstItem="jPb-gc-Niy" firstAttribute="trailing" secondItem="MhY-8I-Auu" secondAttribute="trailing" type="default" id="S4Q-lY-s8N"/>
                             <constraint firstItem="Ikg-tH-vQq" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="TP1-OV-3gV"/>
+                            <constraint firstItem="Ikg-tH-vQq" firstAttribute="top" secondItem="0xr-SP-Bpt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TPm-sE-WvM"/>
                             <constraint firstItem="0eH-eV-8X3" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="VwR-xN-1JP"/>
                             <constraint firstItem="0xr-SP-Bpt" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="X1r-SS-bvl"/>
                             <constraint firstItem="TMb-O4-llH" firstAttribute="top" secondItem="Ikg-tH-vQq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yik-aN-Z1c"/>
+                            <constraint firstItem="0xr-SP-Bpt" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="57" id="cj1-Cy-Fm1"/>
                             <constraint firstItem="Ikg-tH-vQq" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="der-44-ZEj"/>
+                            <constraint firstItem="MhY-8I-Auu" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" constant="6" id="mhZ-9h-L4E"/>
                             <constraint firstItem="0xr-SP-Bpt" firstAttribute="leading" secondItem="IHE-YK-E7f" secondAttribute="leading" type="default" id="n5U-tb-AIg"/>
+                            <constraint firstItem="0Du-o5-uZX" firstAttribute="trailing" secondItem="jPb-gc-Niy" secondAttribute="trailing" type="default" id="nyq-1A-VA0"/>
                             <constraint firstItem="TMb-O4-llH" firstAttribute="trailing" secondItem="IHE-YK-E7f" secondAttribute="trailing" type="default" id="qB0-5q-erW"/>
-                            <constraint firstItem="0xr-SP-Bpt" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="50" id="qHK-eg-BpP"/>
+                            <constraint firstItem="jPb-gc-Niy" firstAttribute="leading" secondItem="MhY-8I-Auu" secondAttribute="leading" type="default" id="xOJ-Ax-wQ4"/>
                             <constraint firstItem="uO0-nk-Exk" firstAttribute="top" secondItem="IHE-YK-E7f" secondAttribute="top" constant="11" id="zBW-rt-nyE"/>
                         </constraints>
                     </view>
@@ -261,7 +294,6 @@
         <class className="QDBQuoteSubmission" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/QDBQuoteSubmission.h"/>
             <relationships>
-                <relationship kind="action" name="CreateQuote:::" candidateClass="NSString"/>
                 <relationship kind="action" name="returnToStream:"/>
                 <relationship kind="action" name="submitQuote:"/>
                 <relationship kind="outlet" name="discription" candidateClass="UITextView"/>

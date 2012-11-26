@@ -13,6 +13,7 @@
 @property (nonatomic, retain) NSMutableArray *quoteID;
 @property (nonatomic, retain) NSMutableArray *body;
 @property (nonatomic, retain) NSMutableArray *discription;
+@property (nonatomic, retain) NSMutableArray *cellHeight;
 @property (weak, nonatomic) IBOutlet UITableView *quoteStream;
 @property (nonatomic, retain) UIRefreshControl *refresh;
 

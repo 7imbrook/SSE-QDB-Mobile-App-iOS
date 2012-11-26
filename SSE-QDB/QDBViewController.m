@@ -36,6 +36,7 @@
     _quoteID = [[NSMutableArray alloc] init];
     _body = [[NSMutableArray alloc] init];
     _discription = [[NSMutableArray alloc] init];
+    _cellHeight = [[NSMutableArray alloc] init];
     // END
     _refresh = [[UIRefreshControl alloc] init];
     [_refresh addTarget:self action:@selector(loadQuotes) forControlEvents:UIControlEventValueChanged];
@@ -89,6 +90,9 @@
                 } else {
                     [_discription addObject:@"None"];
                 }
+                float cellHeight = [self calculateCellHeightWithBody:[quotes valueForKeyPath:@"body"] discription:[quotes valueForKeyPath:@"description"]];
+                NSNumber *height = [[NSNumber alloc] initWithFloat:cellHeight];
+                [_cellHeight addObject:height];
             }
         }
         NSDate *date = [NSDate date];
@@ -162,34 +166,52 @@
     return [_quoteID count];
 }
 
-//- (CGFloat)tableView:(UITableView *)t heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    QDBCell *cell = [t dequeueReusableCellWithIdentifier:@"QuoteCell"];
-//    NSString *bodyText = [_body objectAtIndex:indexPath.row];
-//    NSString *discText = [_discription objectAtIndex:indexPath.row];
-//    CGSize template = CGSizeMake(300,CGFLOAT_MAX);
-//    UIFont *bodyFont = [cell.body font];
-//    UIFont *discFont = [cell.description font];
-//    CGSize bodySize;
-//    CGSize discSize;
-//    bodySize = [bodyText sizeWithFont:bodyFont constrainedToSize:template];
-//    discSize = [discText sizeWithFont:discFont constrainedToSize:template];
-//    NSLog(@"%@", indexPath);
-//    return  bodySize.height + discSize.height + 40;
-//}
+- (float)calculateCellHeightWithBody:(NSString *)body discription:(NSString *)disc{
+    QDBCell *cell = [_quoteStream dequeueReusableCellWithIdentifier:@"QuoteCell"];
+    NSString *bodyText = body;
+    NSString *discText = disc;
+    CGSize template = CGSizeMake(300,CGFLOAT_MAX);
+    UIFont *bodyFont = [cell.body font];
+    UIFont *discFont = [cell.description font];
+    CGSize bodySize;
+    CGSize discSize;
+    bodySize = [bodyText sizeWithFont:bodyFont constrainedToSize:template];
+    discSize = [discText sizeWithFont:discFont constrainedToSize:template];
+    return  bodySize.height + discSize.height + 40;
+}
+
+- (CGFloat)tableView:(UITableView *)t heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    @try {
+        return [[_cellHeight objectAtIndex:indexPath.row] floatValue];
+    }
+    @catch (NSException *e) {
+        NSLog(@"%@", e.description);
+        float cellHeight = [self calculateCellHeightWithBody:[_body objectAtIndex:indexPath.row] discription:[_discription objectAtIndex:indexPath.row]];
+        return cellHeight;
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     NSInteger *totalRows = [_quoteID count];
-    if (((int)indexPath.row + 1) >= ((int)totalRows - 10)) {
+    if (((int)indexPath.row + 1) >= ((int)totalRows - 20)) {
         [self addMoreQuoteToTable];
     }
-    
     QDBCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuoteCell"];
+    @try {
         cell.quoteNumber.text = ((NSNumber *)[_quoteID objectAtIndex:indexPath.row]).stringValue;
         cell.body.text = [_body objectAtIndex:indexPath.row];
         cell.description.text = [_discription objectAtIndex:indexPath.row];
         NSLog(@"Total Rows: %d Loaded: %d ID: %@", (int)totalRows, indexPath.row, [_quoteID objectAtIndex:indexPath.row]);
+    }
+    @catch (NSException *exception) {
+        cell.quoteNumber.text = @"???";
+        cell.body.text = @"Ops, unable to load this quote, sorry :(";
+        cell.description.text = @"We're working on fixing that";
+        NSLog(@"%@", exception.debugDescription);
+    }
+    @finally {
         return cell;
+    }
 }
 
 @end
